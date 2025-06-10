@@ -41,14 +41,11 @@ main {
   min-height: calc(100vh - 120px);
   margin-top: 0;
   padding-top: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* Card hover effects */
-.usa-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: 1px solid #e9ecef;
-}
-
 .usa-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 48, 135, 0.15);
