@@ -119,16 +119,22 @@ const Header = ({ user, onSignOut }) => {
                 </Title>
               </Link>
             </div>
+          </div>
 
-            {/* User Authentication Section */}
-            <div className="header-auth" style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+          {/* Custom Navigation with Authentication */}
+          <nav className="usa-nav" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%" }}>
+            <div className="nav-links" style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              {navLinks}
+            </div>
+            <div className="auth-links" style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
               {user ? (
                 <>
-                  <span style={{ color: "#ffffff", fontSize: "0.9rem" }}>
+                  <span style={{ color: "#ffffff", fontSize: "0.9rem", padding: "0.5rem 1rem" }}>
                     Welcome, {user.name}
                   </span>
                   <button
                     onClick={onSignOut}
+                    className="nav-link"
                     style={{
                       background: "transparent",
                       border: "1px solid #ffffff",
@@ -137,13 +143,9 @@ const Header = ({ user, onSignOut }) => {
                       borderRadius: "0.25rem",
                       cursor: "pointer",
                       fontSize: "0.9rem",
-                      transition: "all 0.2s ease"
-                    }}
-                    onMouseOver={(e) => {
-                      e.target.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
-                    }}
-                    onMouseOut={(e) => {
-                      e.target.style.backgroundColor = "transparent";
+                      transition: "all 0.2s ease",
+                      textDecoration: "none",
+                      fontWeight: "500"
                     }}
                   >
                     Sign Out
@@ -153,25 +155,22 @@ const Header = ({ user, onSignOut }) => {
                 <>
                   <Link
                     to="/signin"
+                    className="nav-link"
                     style={{
                       color: "#ffffff",
                       textDecoration: "none",
                       padding: "0.5rem 1rem",
                       borderRadius: "0.25rem",
                       fontSize: "0.9rem",
-                      transition: "all 0.2s ease"
-                    }}
-                    onMouseOver={(e) => {
-                      e.target.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
-                    }}
-                    onMouseOut={(e) => {
-                      e.target.style.backgroundColor = "transparent";
+                      transition: "all 0.2s ease",
+                      fontWeight: "500"
                     }}
                   >
                     Sign In
                   </Link>
                   <Link
                     to="/signup"
+                    className="nav-link"
                     style={{
                       background: "transparent",
                       border: "1px solid #ffffff",
@@ -180,13 +179,8 @@ const Header = ({ user, onSignOut }) => {
                       borderRadius: "0.25rem",
                       textDecoration: "none",
                       fontSize: "0.9rem",
-                      transition: "all 0.2s ease"
-                    }}
-                    onMouseOver={(e) => {
-                      e.target.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
-                    }}
-                    onMouseOut={(e) => {
-                      e.target.style.backgroundColor = "transparent";
+                      transition: "all 0.2s ease",
+                      fontWeight: "500"
                     }}
                   >
                     Sign Up
@@ -194,18 +188,7 @@ const Header = ({ user, onSignOut }) => {
                 </>
               )}
             </div>
-
-          </div>
-
-          {/* Primary Navigation */}
-          <PrimaryNav
-            items={navLinks}
-            mobileExpanded={isExpanded}
-            onToggleMobileNav={() =>
-              setExpanded((prevExpanded) => !prevExpanded)
-            }
-            className="header-nav"
-          />
+          </nav>
         </div>
       </USWDSHeader>
 
