@@ -1,16 +1,5 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import {
-  Form,
-  Fieldset,
-  Label,
-  TextInput,
-  Textarea,
-  Select,
-  Button,
-  Alert,
-  Checkbox,
-} from '@trussworks/react-uswds';
 
 const PermitApplication = () => {
   const { permitId } = useParams();
@@ -156,20 +145,20 @@ const PermitApplication = () => {
               </div>
 
               <div className="margin-top-4">
-                <Button 
+                <button 
                   type="button" 
                   onClick={() => navigate('/permits')}
                   className="usa-button usa-button--outline margin-right-2"
                 >
                   Apply for Another Permit
-                </Button>
-                <Button 
+                </button>
+                <button 
                   type="button" 
                   onClick={() => navigate('/')}
                   className="usa-button"
                 >
                   Return to Home
-                </Button>
+                </button>
               </div>
             </div>
           </div>
@@ -201,17 +190,22 @@ const PermitApplication = () => {
             </div>
 
             {showAlert && (
-              <Alert type="error" heading="Application Error" headingLevel="h4">
-                {alertMessage}
-              </Alert>
+              <div className="usa-alert usa-alert--error">
+                <div className="usa-alert__body">
+                  <h4 className="usa-alert__heading">Application Error</h4>
+                  <p className="usa-alert__text">{alertMessage}</p>
+                </div>
+              </div>
             )}
 
-            <Form onSubmit={handleSubmit}>
-              <Fieldset legend="Personal Information">
+            <form className="usa-form" onSubmit={handleSubmit}>
+              <fieldset className="usa-fieldset">
+                <legend className="usa-legend">Personal Information</legend>
                 <div className="grid-row grid-gap">
                   <div className="grid-col-12 tablet:grid-col-6">
-                    <Label htmlFor="firstName">First name *</Label>
-                    <TextInput
+                    <label className="usa-label" htmlFor="firstName">First name *</label>
+                    <input
+                      className="usa-input"
                       id="firstName"
                       name="firstName"
                       type="text"
@@ -221,8 +215,9 @@ const PermitApplication = () => {
                     />
                   </div>
                   <div className="grid-col-12 tablet:grid-col-6">
-                    <Label htmlFor="lastName">Last name *</Label>
-                    <TextInput
+                    <label className="usa-label" htmlFor="lastName">Last name *</label>
+                    <input
+                      className="usa-input"
                       id="lastName"
                       name="lastName"
                       type="text"
@@ -235,8 +230,9 @@ const PermitApplication = () => {
 
                 <div className="grid-row grid-gap">
                   <div className="grid-col-12 tablet:grid-col-6">
-                    <Label htmlFor="email">Email address *</Label>
-                    <TextInput
+                    <label className="usa-label" htmlFor="email">Email address *</label>
+                    <input
+                      className="usa-input"
                       id="email"
                       name="email"
                       type="email"
@@ -246,8 +242,9 @@ const PermitApplication = () => {
                     />
                   </div>
                   <div className="grid-col-12 tablet:grid-col-6">
-                    <Label htmlFor="phone">Phone number *</Label>
-                    <TextInput
+                    <label className="usa-label" htmlFor="phone">Phone number *</label>
+                    <input
+                      className="usa-input"
                       id="phone"
                       name="phone"
                       type="tel"
@@ -258,8 +255,9 @@ const PermitApplication = () => {
                   </div>
                 </div>
 
-                <Label htmlFor="address">Address *</Label>
-                <TextInput
+                <label className="usa-label" htmlFor="address">Address *</label>
+                <input
+                  className="usa-input"
                   id="address"
                   name="address"
                   type="text"
@@ -270,8 +268,9 @@ const PermitApplication = () => {
 
                 <div className="grid-row grid-gap">
                   <div className="grid-col-12 tablet:grid-col-6">
-                    <Label htmlFor="city">City *</Label>
-                    <TextInput
+                    <label className="usa-label" htmlFor="city">City *</label>
+                    <input
+                      className="usa-input"
                       id="city"
                       name="city"
                       type="text"
@@ -281,8 +280,9 @@ const PermitApplication = () => {
                     />
                   </div>
                   <div className="grid-col-12 tablet:grid-col-3">
-                    <Label htmlFor="state">State *</Label>
-                    <Select
+                    <label className="usa-label" htmlFor="state">State *</label>
+                    <select
+                      className="usa-select"
                       id="state"
                       name="state"
                       value={formData.state}
@@ -298,11 +298,12 @@ const PermitApplication = () => {
                       <option value="ME">Maine</option>
                       <option value="TX">Texas</option>
                       <option value="WA">Washington</option>
-                    </Select>
+                    </select>
                   </div>
                   <div className="grid-col-12 tablet:grid-col-3">
-                    <Label htmlFor="zipCode">ZIP Code *</Label>
-                    <TextInput
+                    <label className="usa-label" htmlFor="zipCode">ZIP Code *</label>
+                    <input
+                      className="usa-input"
                       id="zipCode"
                       name="zipCode"
                       type="text"
@@ -312,13 +313,15 @@ const PermitApplication = () => {
                     />
                   </div>
                 </div>
-              </Fieldset>
+              </fieldset>
 
-              <Fieldset legend="Fishing Information">
+              <fieldset className="usa-fieldset">
+                <legend className="usa-legend">Fishing Information</legend>
                 <div className="grid-row grid-gap">
                   <div className="grid-col-12 tablet:grid-col-6">
-                    <Label htmlFor="vesselName">Vessel name</Label>
-                    <TextInput
+                    <label className="usa-label" htmlFor="vesselName">Vessel name</label>
+                    <input
+                      className="usa-input"
                       id="vesselName"
                       name="vesselName"
                       type="text"
@@ -327,8 +330,9 @@ const PermitApplication = () => {
                     />
                   </div>
                   <div className="grid-col-12 tablet:grid-col-6">
-                    <Label htmlFor="vesselLength">Vessel length (feet)</Label>
-                    <TextInput
+                    <label className="usa-label" htmlFor="vesselLength">Vessel length (feet)</label>
+                    <input
+                      className="usa-input"
                       id="vesselLength"
                       name="vesselLength"
                       type="number"
@@ -340,8 +344,9 @@ const PermitApplication = () => {
 
                 <div className="grid-row grid-gap">
                   <div className="grid-col-12 tablet:grid-col-6">
-                    <Label htmlFor="vesselType">Vessel type</Label>
-                    <Select
+                    <label className="usa-label" htmlFor="vesselType">Vessel type</label>
+                    <select
+                      className="usa-select"
                       id="vesselType"
                       name="vesselType"
                       value={formData.vesselType}
@@ -352,11 +357,12 @@ const PermitApplication = () => {
                       <option value="sailboat">Sailboat</option>
                       <option value="commercial-vessel">Commercial Vessel</option>
                       <option value="charter-boat">Charter Boat</option>
-                    </Select>
+                    </select>
                   </div>
                   <div className="grid-col-12 tablet:grid-col-6">
-                    <Label htmlFor="homePort">Home port</Label>
-                    <TextInput
+                    <label className="usa-label" htmlFor="homePort">Home port</label>
+                    <input
+                      className="usa-input"
                       id="homePort"
                       name="homePort"
                       type="text"
@@ -366,8 +372,9 @@ const PermitApplication = () => {
                   </div>
                 </div>
 
-                <Label htmlFor="intendedFishingArea">Intended fishing area</Label>
-                <TextInput
+                <label className="usa-label" htmlFor="intendedFishingArea">Intended fishing area</label>
+                <input
+                  className="usa-input"
                   id="intendedFishingArea"
                   name="intendedFishingArea"
                   type="text"
@@ -375,8 +382,9 @@ const PermitApplication = () => {
                   onChange={handleChange}
                 />
 
-                <Label htmlFor="targetSpecies">Target species</Label>
-                <TextInput
+                <label className="usa-label" htmlFor="targetSpecies">Target species</label>
+                <input
+                  className="usa-input"
                   id="targetSpecies"
                   name="targetSpecies"
                   type="text"
@@ -384,8 +392,9 @@ const PermitApplication = () => {
                   onChange={handleChange}
                 />
 
-                <Label htmlFor="fishingExperience">Years of fishing experience</Label>
-                <Select
+                <label className="usa-label" htmlFor="fishingExperience">Years of fishing experience</label>
+                <select
+                  className="usa-select"
                   id="fishingExperience"
                   name="fishingExperience"
                   value={formData.fishingExperience}
@@ -397,50 +406,65 @@ const PermitApplication = () => {
                   <option value="6-10">6-10 years</option>
                   <option value="11-20">11-20 years</option>
                   <option value="20+">20+ years</option>
-                </Select>
-              </Fieldset>
+                </select>
+              </fieldset>
 
-              <Fieldset legend="Additional Information">
-                <Label htmlFor="additionalInfo">Additional information or special requests</Label>
-                <Textarea
+              <fieldset className="usa-fieldset">
+                <legend className="usa-legend">Additional Information</legend>
+                <label className="usa-label" htmlFor="additionalInfo">Additional information or special requests</label>
+                <textarea
+                  className="usa-textarea"
                   id="additionalInfo"
                   name="additionalInfo"
                   value={formData.additionalInfo}
                   onChange={handleChange}
                 />
-              </Fieldset>
+              </fieldset>
 
-              <Fieldset legend="Certification">
-                <Checkbox
-                  id="certifyTruth"
-                  name="certifyTruth"
-                  label="I certify that the information provided is true and accurate to the best of my knowledge."
-                  checked={formData.certifyTruth}
-                  onChange={handleChange}
-                />
+              <fieldset className="usa-fieldset">
+                <legend className="usa-legend">Certification</legend>
+                <div className="usa-checkbox">
+                  <input
+                    className="usa-checkbox__input"
+                    id="certifyTruth"
+                    name="certifyTruth"
+                    type="checkbox"
+                    checked={formData.certifyTruth}
+                    onChange={handleChange}
+                  />
+                  <label className="usa-checkbox__label" htmlFor="certifyTruth">
+                    I certify that the information provided is true and accurate to the best of my knowledge.
+                  </label>
+                </div>
 
-                <Checkbox
-                  id="agreeToTerms"
-                  name="agreeToTerms"
-                  label="I agree to comply with all applicable fishing regulations and permit conditions."
-                  checked={formData.agreeToTerms}
-                  onChange={handleChange}
-                />
-              </Fieldset>
+                <div className="usa-checkbox">
+                  <input
+                    className="usa-checkbox__input"
+                    id="agreeToTerms"
+                    name="agreeToTerms"
+                    type="checkbox"
+                    checked={formData.agreeToTerms}
+                    onChange={handleChange}
+                  />
+                  <label className="usa-checkbox__label" htmlFor="agreeToTerms">
+                    I agree to comply with all applicable fishing regulations and permit conditions.
+                  </label>
+                </div>
+              </fieldset>
 
               <div className="margin-top-4">
-                <Button type="submit" className="usa-button margin-right-2">
+                <button type="submit" className="usa-button margin-right-2">
                   Submit Application
-                </Button>
-                <Button 
+                </button>
+                <button 
                   type="button" 
                   onClick={() => navigate('/permits')}
                   className="usa-button usa-button--outline"
                 >
                   Cancel
-                </Button>
+                </button>
               </div>
-            </Form>
+            </form>
 
             <div className="usa-alert usa-alert--info margin-top-4">
               <div className="usa-alert__body">
