@@ -114,8 +114,8 @@ const Header = ({ user, onSignOut }) => {
                 }}
                 onClick={() => setExpanded(false)}
               >
-                <Title className="header-title" style={{ color: "#ffffff", fontSize: "1rem" }}>
-                  NOAA Fisheries Permit System
+                <Title className="header-title" style={{ color: "#ffffff", fontSize: "1.5rem" }}>
+                  Permit System
                 </Title>
               </Link>
             </div>

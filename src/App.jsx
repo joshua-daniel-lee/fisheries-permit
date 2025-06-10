@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { Header, SignIn, SignUp, Footer } from './components';
+import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
+import { Header, SignIn, SignUp, Footer, PermitSelection, PermitApplication } from './components';
 import '@trussworks/react-uswds/lib/uswds.css';
 import '@trussworks/react-uswds/lib/index.css';
 
@@ -10,7 +10,7 @@ const HomePage = () => (
     <div className="grid-container">
       <div className="grid-row">
         <div className="grid-col-12">
-          <h1>Welcome to the NOAA Fisheries Permit System</h1>
+          <h1>Welcome to the fake Permit System</h1>
           <p className="usa-intro">
             This system helps you manage fishing permits, applications, and reports 
             in compliance with federal regulations.
@@ -35,7 +35,9 @@ const HomePage = () => (
                   <p>Submit new permit applications and track their status.</p>
                 </div>
                 <div className="usa-card__footer">
-                  <button className="usa-button">Start Application</button>
+                  <Link to="/permits">
+                    <button className="usa-button">Start Application</button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -49,7 +51,9 @@ const HomePage = () => (
                   <p>Access your fishing reports and compliance documents.</p>
                 </div>
                 <div className="usa-card__footer">
-                  <button className="usa-button usa-button--outline">View Reports</button>
+                  <Link to="/reports">
+                    <button className="usa-button usa-button--outline">View Reports</button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -194,7 +198,8 @@ function App() {
         <Header user={user} onSignOut={handleSignOut} />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/permits" element={<PermitsPage />} />
+          <Route path="/permits" element={<PermitSelection />} />
+          <Route path="/apply/:permitId" element={<PermitApplication />} />
           <Route path="/applications" element={<ApplicationsPage />} />
           <Route path="/reports" element={<ReportsPage />} />
           <Route path="/help" element={<HelpPage />} />

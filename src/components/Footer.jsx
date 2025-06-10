@@ -44,18 +44,9 @@ const Footer = () => {
             <div className="tablet:grid-col-8">
               <div className="usa-footer__logo grid-row grid-gap-2">
                 <div className="grid-col-auto">
-                  <img
-                    className="usa-footer__logo-img"
-                    src="/icons/radfish.png"
-                    alt="NOAA Fisheries"
-                    style={{ width: "64px", height: "64px" }}
-                  />
                 </div>
                 <div className="grid-col-auto">
-                  <h3 className="usa-footer__logo-heading">NOAA Fisheries</h3>
-                  <p className="usa-footer__logo-text">
-                    National Marine Fisheries Service
-                  </p>
+                  <h3 className="usa-footer__logo-heading">Permit System</h3>
                 </div>
               </div>
             </div>
