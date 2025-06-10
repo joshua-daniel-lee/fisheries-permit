@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { Header, SignIn, SignUp } from './components';
+import { Header, SignIn, SignUp, Footer } from './components';
 import '@trussworks/react-uswds/lib/uswds.css';
 import '@trussworks/react-uswds/lib/index.css';
 
@@ -211,6 +211,7 @@ function App() {
             } 
           />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
