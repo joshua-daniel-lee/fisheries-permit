@@ -92,8 +92,7 @@ const PermitSelection = () => {
               {permits.map((permit) => (
                 <div key={permit.id} className="grid-col-12 tablet:grid-col-6 desktop:grid-col-4 margin-bottom-4">
                   <div className="usa-card height-full">
-                    <div className="usa-card__container">
-                      <div className="usa-card__header">
+                    <div className="usa-card__header">
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
                           <h3 className="usa-card__heading" style={{ margin: 0, fontSize: '1.25rem' }}>
                             {permit.title}
@@ -141,13 +140,12 @@ const PermitSelection = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="usa-card__footer">
-                        <Link to={`/apply/${permit.id}`}>
-                          <button type="button" className="usa-button width-full">
-                            Apply for This Permit
-                          </button>
-                        </Link>
-                      </div>
+                    <div className="usa-card__footer">
+                      <Link to={`/apply/${permit.id}`}>
+                        <button type="button" className="usa-button width-full">
+                          Apply for This Permit
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
