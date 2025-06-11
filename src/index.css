@@ -152,6 +152,47 @@ main {
   margin-bottom: 1rem !important;
 }
 
+/* Applications page card uniformity */
+.usa-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.usa-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Ensure uniform card heights on applications page */
+[class*="grid-col"] .usa-card {
+  min-height: 420px;
+}
+
+/* Applications page specific card styling */
+.usa-card__body p {
+  margin-bottom: 0.75rem !important;
+  line-height: 1.5 !important;
+  font-size: 0.95rem !important;
+}
+
+.usa-card__body p strong {
+  display: inline-block;
+  min-width: 100px;
+  font-weight: 600 !important;
+  color: #1b1b1b !important;
+}
+
+/* Ensure consistent spacing for all card content */
+.usa-card__body > p:nth-child(1) { margin-top: 0 !important; }
+.usa-card__body > p:nth-child(2) { margin-top: 0.25rem !important; }
+.usa-card__body > p:nth-child(3) { margin-top: 0.25rem !important; }
+.usa-card__body > p:nth-child(4) { margin-top: 0.25rem !important; }
+.usa-card__body > p:nth-child(5) { margin-top: 0.25rem !important; }
+.usa-card__body > p:last-child { margin-bottom: 0 !important; }
+
 /* Responsive card adjustments */
 @media (max-width: 768px) {
   .usa-card__header {
@@ -167,6 +208,25 @@ main {
   .usa-card__footer .usa-button {
     flex: none;
     width: 100%;
+  }
+  
+  /* Reduce minimum height on mobile for better fit */
+  [class*="grid-col"] .usa-card {
+    min-height: auto;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tablet adjustments */
+  [class*="grid-col"] .usa-card {
+    min-height: 380px;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* Desktop adjustments */
+  [class*="grid-col"] .usa-card {
+    min-height: 420px;
   }
 }
 
