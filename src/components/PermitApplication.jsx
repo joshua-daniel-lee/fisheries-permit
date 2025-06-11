@@ -108,61 +108,58 @@ const PermitApplication = () => {
     return (
       <main id="main-content" className="usa-section">
         <div className="grid-container">
-          <div className="grid-row grid-gap flex-justify-center">
-            <div className="grid-col-12 tablet:grid-col-10 desktop:grid-col-8">
-              <div className="usa-card">
-                <div className="usa-card__container">
-                  <div className="usa-card__header">
-                    <h1 className="usa-card__heading">Application Submitted Successfully!</h1>
-                  </div>
-                  <div className="usa-card__body">
-                    <div className="usa-alert usa-alert--success">
-                      <div className="usa-alert__body">
-                        <p className="usa-alert__text">
-                          Your application for <strong>{currentPermit.title}</strong> has been submitted.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="margin-top-4 padding-2" style={{ backgroundColor: '#f0f8ff', border: '1px solid #0085CA', borderRadius: '4px' }}>
-                      <h3 style={{ margin: '0 0 1rem 0', color: '#003087' }}>Application Summary</h3>
-                      <ul style={{ margin: 0, paddingLeft: '1.25rem' }}>
-                        <li><strong>Permit Type:</strong> {currentPermit.title}</li>
-                        <li><strong>Application Fee:</strong> {currentPermit.fee}</li>
-                        <li><strong>Processing Time:</strong> {currentPermit.processingTime}</li>
-                        <li><strong>Application ID:</strong> DEMO-{Date.now()}</li>
-                        <li><strong>Submitted:</strong> {new Date().toLocaleDateString()}</li>
-                      </ul>
-                    </div>
-
-                    <div className="usa-alert usa-alert--info margin-top-4">
-                      <div className="usa-alert__body">
-                        <h4 className="usa-alert__heading">What's Next?</h4>
-                        <p className="usa-alert__text">
-                          In a real system, you would receive a confirmation email and be able to track your application status. 
-                          This is a demonstration application, so no actual permit will be processed.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="margin-top-4">
-                      <button 
-                        type="button" 
-                        onClick={() => navigate('/permits')}
-                        className="usa-button usa-button--outline margin-right-2"
-                      >
-                        Apply for Another Permit
-                      </button>
-                      <button 
-                        type="button" 
-                        onClick={() => navigate('/')}
-                        className="usa-button"
-                      >
-                        Return to Home
-                      </button>
-                    </div>
-                  </div>
+          <div className="grid-row">
+            <div className="grid-col-12 tablet:grid-col-10 tablet:grid-offset-1 desktop:grid-col-8 desktop:grid-offset-2">
+              <h1>Application Submitted Successfully!</h1>
+              
+              <div className="usa-alert usa-alert--success">
+                <div className="usa-alert__body">
+                  <p className="usa-alert__text">
+                    Your application for <strong>{currentPermit.title}</strong> has been submitted.
+                  </p>
                 </div>
+              </div>
+
+              <div className="usa-card margin-top-4">
+                <div className="usa-card__header">
+                  <h3 className="usa-card__heading">Application Summary</h3>
+                </div>
+                <div className="usa-card__body">
+                  <ul style={{ margin: 0, paddingLeft: '1.25rem' }}>
+                    <li><strong>Permit Type:</strong> {currentPermit.title}</li>
+                    <li><strong>Application Fee:</strong> {currentPermit.fee}</li>
+                    <li><strong>Processing Time:</strong> {currentPermit.processingTime}</li>
+                    <li><strong>Application ID:</strong> DEMO-{Date.now()}</li>
+                    <li><strong>Submitted:</strong> {new Date().toLocaleDateString()}</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="usa-alert usa-alert--info margin-top-4">
+                <div className="usa-alert__body">
+                  <h4 className="usa-alert__heading">What's Next?</h4>
+                  <p className="usa-alert__text">
+                    In a real system, you would receive a confirmation email and be able to track your application status. 
+                    This is a demonstration application, so no actual permit will be processed.
+                  </p>
+                </div>
+              </div>
+
+              <div className="margin-top-4">
+                <button 
+                  type="button" 
+                  onClick={() => navigate('/permits')}
+                  className="usa-button usa-button--outline margin-right-2"
+                >
+                  Apply for Another Permit
+                </button>
+                <button 
+                  type="button" 
+                  onClick={() => navigate('/')}
+                  className="usa-button"
+                >
+                  Return to Home
+                </button>
               </div>
             </div>
           </div>
@@ -174,36 +171,35 @@ const PermitApplication = () => {
   return (
     <main id="main-content" className="usa-section">
       <div className="grid-container">
-        <div className="grid-row grid-gap flex-justify-center">
-          <div className="grid-col-12 tablet:grid-col-10 desktop:grid-col-8">
-            <div className="usa-card">
-              <div className="usa-card__container">
-                <div className="usa-card__header">
-                  <h1 className="usa-card__heading">Apply for {currentPermit.title}</h1>
+        <div className="grid-row">
+          <div className="grid-col-12 tablet:grid-col-10 tablet:grid-offset-1 desktop:grid-col-8 desktop:grid-offset-2">
+            <h1>Apply for {currentPermit.title}</h1>
+            <p className="usa-intro">
+              Complete the form below to submit your permit application.
+            </p>
+
+            <div className="usa-card margin-bottom-4">
+              <div className="usa-card__header">
+                <h3 className="usa-card__heading">Permit Information</h3>
+              </div>
+              <div className="usa-card__body">
+                <ul style={{ margin: 0, paddingLeft: '1.25rem' }}>
+                  <li><strong>Application Fee:</strong> {currentPermit.fee}</li>
+                  <li><strong>Processing Time:</strong> {currentPermit.processingTime}</li>
+                </ul>
+              </div>
+            </div>
+
+            {showAlert && (
+              <div className="usa-alert usa-alert--error">
+                <div className="usa-alert__body">
+                  <h4 className="usa-alert__heading">Application Error</h4>
+                  <p className="usa-alert__text">{alertMessage}</p>
                 </div>
-                <div className="usa-card__body">
-                  <p className="usa-intro">
-                    Complete the form below to submit your permit application.
-                  </p>
+              </div>
+            )}
 
-                  <div className="margin-bottom-4 padding-2" style={{ backgroundColor: '#f0f8ff', border: '1px solid #0085CA', borderRadius: '4px' }}>
-                    <h3 style={{ margin: '0 0 1rem 0', color: '#003087' }}>Permit Information</h3>
-                    <ul style={{ margin: 0, paddingLeft: '1.25rem' }}>
-                      <li><strong>Application Fee:</strong> {currentPermit.fee}</li>
-                      <li><strong>Processing Time:</strong> {currentPermit.processingTime}</li>
-                    </ul>
-                  </div>
-
-                  {showAlert && (
-                    <div className="usa-alert usa-alert--error">
-                      <div className="usa-alert__body">
-                        <h4 className="usa-alert__heading">Application Error</h4>
-                        <p className="usa-alert__text">{alertMessage}</p>
-                      </div>
-                    </div>
-                  )}
-
-                  <form className="usa-form" onSubmit={handleSubmit}>
+            <form className="usa-form" onSubmit={handleSubmit}>
                     <fieldset className="usa-fieldset">
                       <legend className="usa-legend">Personal Information</legend>
                       <div className="grid-row grid-gap">
@@ -469,17 +465,14 @@ const PermitApplication = () => {
                         Cancel
                       </button>
                     </div>
-                  </form>
+            </form>
 
-                  <div className="usa-alert usa-alert--info margin-top-4">
-                    <div className="usa-alert__body">
-                      <h4 className="usa-alert__heading">Demo Application</h4>
-                      <p className="usa-alert__text">
-                        This is a demonstration application. No real permit will be processed and no payment will be collected.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+            <div className="usa-alert usa-alert--info margin-top-4">
+              <div className="usa-alert__body">
+                <h4 className="usa-alert__heading">Demo Application</h4>
+                <p className="usa-alert__text">
+                  This is a demonstration application. No real permit will be processed and no payment will be collected.
+                </p>
               </div>
             </div>
           </div>
