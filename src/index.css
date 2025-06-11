@@ -62,6 +62,10 @@ main {
 .usa-button {
   background-color: #0085CA;
   border-color: #0085CA;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .usa-button:hover {
@@ -72,6 +76,10 @@ main {
 .usa-button--outline {
   color: #0085CA;
   border-color: #0085CA;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .usa-button--outline:hover {
