@@ -60,32 +60,42 @@ main {
 
 /* Button customizations */
 .usa-button {
-  background-color: #0085CA;
-  border-color: #0085CA;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #0085CA !important;
+  border-color: #0085CA !important;
+  text-align: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.75rem 1rem !important;
 }
 
 .usa-button:hover {
-  background-color: #0066A0;
-  border-color: #0066A0;
+  background-color: #0066A0 !important;
+  border-color: #0066A0 !important;
 }
 
 .usa-button--outline {
-  color: #0085CA;
-  border-color: #0085CA;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: #0085CA !important;
+  border-color: #0085CA !important;
+  background-color: transparent !important;
+  text-align: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.75rem 1rem !important;
 }
 
 .usa-button--outline:hover {
-  background-color: #0085CA;
-  border-color: #0085CA;
-  color: #ffffff;
+  background-color: #0085CA !important;
+  border-color: #0085CA !important;
+  color: #ffffff !important;
+}
+
+/* Ensure button text is centered */
+.usa-button span,
+.usa-button--outline span {
+  text-align: center !important;
+  width: 100% !important;
 }
 
 /* Alert customizations */
