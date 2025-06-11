@@ -1,4 +1,4 @@
-# NOAA Fisheries Permit System
+# Fishing Permit System
 
 A React-based web application for managing fishing permits, applications, and reports in compliance with federal regulations.
 
@@ -43,7 +43,7 @@ A React-based web application for managing fishing permits, applications, and re
 
 The application expects the following assets to be placed in the `public/icons/` directory:
 
-- `radfish.png` - NOAA Fisheries logo (48x48 pixels)
+- `radfish.png` - Application logo (48x48 pixels)
 
 ## Available Scripts
 
@@ -78,7 +78,7 @@ public/
 
 ## Development Notes
 
-- The application uses USWDS color scheme with NOAA branding
+- The application uses USWDS color scheme with generic branding
 - All pages except Home show "Under Development" placeholders
 - Navigation includes active state indicators
 - Mobile-responsive design with collapsible navigation
@@ -88,7 +88,7 @@ public/
 
 To continue development:
 
-1. Add the NOAA Fisheries radfish logo to `public/icons/radfish.png`
+1. Add the application logo to `public/icons/radfish.png`
 2. Implement the permit application forms
 3. Add data management and API integration
 4. Implement user authentication

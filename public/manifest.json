@@ -1,6 +1,6 @@
 {
-  "short_name": "NOAA Permits",
-  "name": "NOAA Fisheries Permit System",
+  "short_name": "Fishing Permits",
+  "name": "Fishing Permit System",
   "icons": [
     {
       "src": "favicon.ico",

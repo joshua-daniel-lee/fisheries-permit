@@ -48,7 +48,7 @@ const SignIn = ({ onSignIn }) => {
           <div className="grid-col-12 tablet:grid-col-8 tablet:grid-offset-2 desktop:grid-col-6 desktop:grid-offset-3">
             <h1>Sign In</h1>
             <p className="usa-intro">
-              Sign in to access your NOAA Fisheries permit account.
+              Sign in to access your permit account.
             </p>
 
             {showAlert && (
