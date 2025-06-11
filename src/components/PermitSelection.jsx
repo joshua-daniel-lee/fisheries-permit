@@ -93,53 +93,48 @@ const PermitSelection = () => {
                 <div key={permit.id} className="grid-col-12 tablet:grid-col-6 desktop:grid-col-4 margin-bottom-4">
                   <div className="usa-card height-full">
                     <div className="usa-card__header">
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
-                          <h3 className="usa-card__heading" style={{ margin: 0, fontSize: '1.25rem' }}>
-                            {permit.title}
-                          </h3>
-                          <span 
-                            style={{ 
-                              backgroundColor: getCategoryColor(permit.category),
-                              color: 'white',
-                              padding: '0.25rem 0.5rem',
-                              borderRadius: '0.25rem',
-                              fontSize: '0.75rem',
-                              fontWeight: 'bold'
-                            }}
-                          >
-                            {permit.category}
-                          </span>
-                        </div>
+                      <h3 className="usa-card__heading">
+                        {permit.title}
+                      </h3>
+                      <span 
+                        className="usa-tag"
+                        style={{ 
+                          backgroundColor: getCategoryColor(permit.category),
+                          color: 'white'
+                        }}
+                      >
+                        {permit.category}
+                      </span>
+                    </div>
+                    <div className="usa-card__body">
+                      <p>
+                        {permit.description}
+                      </p>
+                      
+                      <div style={{ marginBottom: '1rem' }}>
+                        <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: '#1b1b1b', fontWeight: '600' }}>Requirements:</h4>
+                        <ul style={{ fontSize: '0.875rem', paddingLeft: '1.25rem', margin: 0 }}>
+                          {permit.requirements.map((req, index) => (
+                            <li key={index} style={{ marginBottom: '0.25rem' }}>{req}</li>
+                          ))}
+                        </ul>
                       </div>
-                      <div className="usa-card__body">
-                        <p style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
-                          {permit.description}
-                        </p>
-                        
-                        <div style={{ marginBottom: '1rem' }}>
-                          <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: '#1b1b1b' }}>Requirements:</h4>
-                          <ul style={{ fontSize: '0.85rem', paddingLeft: '1.25rem', margin: 0 }}>
-                            {permit.requirements.map((req, index) => (
-                              <li key={index} style={{ marginBottom: '0.25rem' }}>{req}</li>
-                            ))}
-                          </ul>
-                        </div>
 
-                        <div className="grid-row grid-gap margin-top-2">
-                          <div className="grid-col-6">
-                            <strong style={{ fontSize: '0.9rem', color: '#1b1b1b' }}>Fee:</strong>
-                            <div style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#0085CA' }}>
-                              {permit.fee}
-                            </div>
+                      <div className="grid-row grid-gap" style={{ marginTop: 'auto' }}>
+                        <div className="grid-col-6">
+                          <strong>Fee:</strong>
+                          <div style={{ fontSize: '1.125rem', fontWeight: 'bold', color: '#0085CA' }}>
+                            {permit.fee}
                           </div>
-                          <div className="grid-col-6">
-                            <strong style={{ fontSize: '0.9rem', color: '#1b1b1b' }}>Processing:</strong>
-                            <div style={{ fontSize: '0.9rem' }}>
-                              {permit.processingTime}
-                            </div>
+                        </div>
+                        <div className="grid-col-6">
+                          <strong>Processing:</strong>
+                          <div>
+                            {permit.processingTime}
                           </div>
                         </div>
                       </div>
+                    </div>
                     <div className="usa-card__footer">
                       <Link to={`/apply/${permit.id}`}>
                         <button type="button" className="usa-button width-full">
