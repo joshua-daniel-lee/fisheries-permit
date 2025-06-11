@@ -193,9 +193,11 @@ main {
   font-size: 0.9rem !important;
 }
 
-/* Reports page specific styling */
+/* Reports page specific styling - override global card styles */
 .usa-card.margin-bottom-4 {
   margin-bottom: 2rem !important;
+  height: auto !important;
+  display: block !important;
 }
 
 .usa-card.margin-bottom-4 .usa-card__header {
@@ -209,6 +211,9 @@ main {
 
 .usa-card.margin-bottom-4 .usa-card__body {
   padding: 1.5rem !important;
+  flex: none !important;
+  display: block !important;
+  justify-content: flex-start !important;
 }
 
 .usa-card.margin-bottom-4 .usa-card__body .grid-row {
@@ -231,6 +236,13 @@ main {
   margin-bottom: 0 !important;
 }
 
+.usa-card.margin-bottom-4 .usa-card__body p {
+  margin-bottom: 0.75rem !important;
+  line-height: 1.5 !important;
+  font-size: 0.95rem !important;
+  color: inherit !important;
+}
+
 .usa-card.margin-bottom-4 .usa-card__footer {
   padding: 1rem 1.5rem 1.5rem 1.5rem !important;
   border-top: 1px solid #e6e6e6;
@@ -245,9 +257,17 @@ main {
   min-width: 140px;
 }
 
-/* Reports page sidebar cards */
-.usa-card.margin-bottom-4:not(.usa-card.margin-bottom-4 .usa-card__body .grid-row) {
-  min-height: auto;
+/* Reports page sidebar cards - override global flexbox */
+.grid-col-12.desktop\\:grid-col-4 .usa-card {
+  height: auto !important;
+  display: block !important;
+  min-height: auto !important;
+}
+
+.grid-col-12.desktop\\:grid-col-4 .usa-card .usa-card__body {
+  flex: none !important;
+  display: block !important;
+  justify-content: flex-start !important;
 }
 
 /* Responsive adjustments for reports page */
