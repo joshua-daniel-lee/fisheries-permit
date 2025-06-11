@@ -193,6 +193,91 @@ main {
   font-size: 0.9rem !important;
 }
 
+/* Reports page specific styling */
+.usa-card.margin-bottom-4 {
+  margin-bottom: 2rem !important;
+}
+
+.usa-card.margin-bottom-4 .usa-card__header {
+  padding: 1.5rem 1.5rem 1rem 1.5rem !important;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.usa-card.margin-bottom-4 .usa-card__body {
+  padding: 1.5rem !important;
+}
+
+.usa-card.margin-bottom-4 .usa-card__body .grid-row {
+  margin-left: -0.75rem !important;
+  margin-right: -0.75rem !important;
+}
+
+.usa-card.margin-bottom-4 .usa-card__body .grid-col-6 {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+.usa-card.margin-bottom-4 .usa-card__body .grid-col-6 p {
+  margin-bottom: 0.75rem !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+}
+
+.usa-card.margin-bottom-4 .usa-card__body .grid-col-6 p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.usa-card.margin-bottom-4 .usa-card__footer {
+  padding: 1rem 1.5rem 1.5rem 1.5rem !important;
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.usa-card.margin-bottom-4 .usa-card__footer .usa-button {
+  margin: 0 !important;
+  flex: 1;
+  min-width: 140px;
+}
+
+/* Reports page sidebar cards */
+.usa-card.margin-bottom-4:not(.usa-card.margin-bottom-4 .usa-card__body .grid-row) {
+  min-height: auto;
+}
+
+/* Responsive adjustments for reports page */
+@media (max-width: 768px) {
+  .usa-card.margin-bottom-4 .usa-card__body .grid-row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .usa-card.margin-bottom-4 .usa-card__body .grid-col-6 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 1rem;
+  }
+  
+  .usa-card.margin-bottom-4 .usa-card__footer {
+    flex-direction: column;
+  }
+  
+  .usa-card.margin-bottom-4 .usa-card__footer .usa-button {
+    flex: none;
+    width: 100%;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .usa-card.margin-bottom-4 .usa-card__footer .usa-button:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
 /* Applications page specific card styling */
 .usa-card__body p {
   margin-bottom: 0.75rem !important;
