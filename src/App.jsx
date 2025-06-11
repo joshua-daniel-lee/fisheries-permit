@@ -332,7 +332,7 @@ const ReportsPage = () => (
                 <div className="usa-card__body">
                   <h3>Submit New Report</h3>
                   <p>File your latest catch report or logbook entry.</p>
-                  <button className="usa-button width-full">Start Report</button>
+                  <button className="usa-button width-full">New Report</button>
                 </div>
               </div>
 
@@ -340,7 +340,7 @@ const ReportsPage = () => (
                 <div className="usa-card__body">
                   <h3>Reporting Calendar</h3>
                   <p>View upcoming report due dates and deadlines.</p>
-                  <button className="usa-button usa-button--outline width-full">View Calendar</button>
+                  <button className="usa-button usa-button--outline width-full">Calendar</button>
                 </div>
               </div>
 
