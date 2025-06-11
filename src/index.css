@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-/* Custom styles for the NOAA Fisheries Permit System */
+/* Custom styles for the Fishing Permit System */
 .App {
   min-height: 100vh;
   background-color: #f8f9fa;
@@ -37,12 +37,14 @@ code {
 
 /* Main content area */
 main {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
   min-height: calc(100vh - 120px);
-  margin-top: 0;
-  padding-top: 2rem;
+  margin-top: 0 !important;
+  padding: 2rem 0 !important;
   position: relative;
   z-index: 1;
+  display: block !important;
+  visibility: visible !important;
 }
 
 /* Card hover effects */

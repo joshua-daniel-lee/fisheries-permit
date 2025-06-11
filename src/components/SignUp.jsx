@@ -69,7 +69,7 @@ const SignUp = ({ onSignUp }) => {
           <div className="grid-col-12 tablet:grid-col-8 tablet:grid-offset-2 desktop:grid-col-6 desktop:grid-offset-3">
             <h1>Create Account</h1>
             <p className="usa-intro">
-              Create a new account to access the NOAA Fisheries permit system.
+              Create a new account to access the fishing permit system.
             </p>
 
             {showAlert && (

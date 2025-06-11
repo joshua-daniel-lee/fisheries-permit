@@ -165,7 +165,7 @@ const HelpPage = () => (
               <div className="usa-alert__body">
                 <p className="usa-alert__text">
                   <strong>Phone:</strong> 1-800-XXX-XXXX<br/>
-                  <strong>Email:</strong> permits@noaa.gov<br/>
+                  <strong>Email:</strong> permits@example.gov<br/>
                   <strong>Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM EST
                 </p>
               </div>

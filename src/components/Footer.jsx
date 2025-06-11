@@ -57,8 +57,8 @@ const Footer = () => {
                   <a key="telephone" href="tel:1-800-853-1964">
                     1-800-853-1964
                   </a>,
-                  <a key="email" href="mailto:permits@noaa.gov">
-                    permits@noaa.gov
+                  <a key="email" href="mailto:permits@example.gov">
+                    permits@example.gov
                   </a>,
                 ]}
               />
@@ -74,7 +74,7 @@ const Footer = () => {
                       <li className="grid-col-auto">
                         <a 
                           className="usa-footer__secondary-link" 
-                          href="https://www.fisheries.noaa.gov/about/privacy-policy"
+                          href="https://www.usa.gov/privacy"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -84,7 +84,7 @@ const Footer = () => {
                       <li className="grid-col-auto">
                         <a 
                           className="usa-footer__secondary-link" 
-                          href="https://www.fisheries.noaa.gov/about/accessibility"
+                          href="https://www.usa.gov/accessibility"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -94,7 +94,7 @@ const Footer = () => {
                       <li className="grid-col-auto">
                         <a 
                           className="usa-footer__secondary-link" 
-                          href="https://www.fisheries.noaa.gov/about/foia"
+                          href="https://www.foia.gov"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -104,7 +104,7 @@ const Footer = () => {
                       <li className="grid-col-auto">
                         <a 
                           className="usa-footer__secondary-link" 
-                          href="https://www.noaa.gov/information-quality"
+                          href="https://www.usa.gov/quality-standards"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -114,7 +114,7 @@ const Footer = () => {
                       <li className="grid-col-auto">
                         <a 
                           className="usa-footer__secondary-link" 
-                          href="https://www.fisheries.noaa.gov/contact-us"
+                          href="https://www.usa.gov/contact"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -137,8 +137,8 @@ const Footer = () => {
             <div className="grid-col-12">
               <div className="usa-footer__secondary-section border-top-1px border-base-lighter padding-top-2">
                 <p className="usa-footer__logo-text text-center">
-                  <strong>Demo Application Notice:</strong> This is a demonstration application for the NOAA Fisheries Permit System. 
-                  No real permit data is processed or stored. For actual permit applications, please visit the official NOAA Fisheries website.
+                  <strong>Demo Application Notice:</strong> This is a demonstration application for the Fishing Permit System. 
+                  No real permit data is processed or stored. For actual permit applications, please visit the official government website.
                 </p>
               </div>
             </div>
