@@ -124,19 +124,15 @@ const PermitApplication = () => {
                       </div>
                     </div>
 
-                    <div className="usa-summary-box margin-top-4">
-                      <div className="usa-summary-box__body">
-                        <h3 className="usa-summary-box__heading">Application Summary</h3>
-                        <div className="usa-summary-box__text">
-                          <ul>
-                            <li><strong>Permit Type:</strong> {currentPermit.title}</li>
-                            <li><strong>Application Fee:</strong> {currentPermit.fee}</li>
-                            <li><strong>Processing Time:</strong> {currentPermit.processingTime}</li>
-                            <li><strong>Application ID:</strong> DEMO-{Date.now()}</li>
-                            <li><strong>Submitted:</strong> {new Date().toLocaleDateString()}</li>
-                          </ul>
-                        </div>
-                      </div>
+                    <div className="margin-top-4 padding-2" style={{ backgroundColor: '#f0f8ff', border: '1px solid #0085CA', borderRadius: '4px' }}>
+                      <h3 style={{ margin: '0 0 1rem 0', color: '#003087' }}>Application Summary</h3>
+                      <ul style={{ margin: 0, paddingLeft: '1.25rem' }}>
+                        <li><strong>Permit Type:</strong> {currentPermit.title}</li>
+                        <li><strong>Application Fee:</strong> {currentPermit.fee}</li>
+                        <li><strong>Processing Time:</strong> {currentPermit.processingTime}</li>
+                        <li><strong>Application ID:</strong> DEMO-{Date.now()}</li>
+                        <li><strong>Submitted:</strong> {new Date().toLocaleDateString()}</li>
+                      </ul>
                     </div>
 
                     <div className="usa-alert usa-alert--info margin-top-4">
@@ -190,16 +186,12 @@ const PermitApplication = () => {
                     Complete the form below to submit your permit application.
                   </p>
 
-                  <div className="usa-summary-box margin-bottom-4">
-                    <div className="usa-summary-box__body">
-                      <h3 className="usa-summary-box__heading">Permit Information</h3>
-                      <div className="usa-summary-box__text">
-                        <ul>
-                          <li><strong>Application Fee:</strong> {currentPermit.fee}</li>
-                          <li><strong>Processing Time:</strong> {currentPermit.processingTime}</li>
-                        </ul>
-                      </div>
-                    </div>
+                  <div className="margin-bottom-4 padding-2" style={{ backgroundColor: '#f0f8ff', border: '1px solid #0085CA', borderRadius: '4px' }}>
+                    <h3 style={{ margin: '0 0 1rem 0', color: '#003087' }}>Permit Information</h3>
+                    <ul style={{ margin: 0, paddingLeft: '1.25rem' }}>
+                      <li><strong>Application Fee:</strong> {currentPermit.fee}</li>
+                      <li><strong>Processing Time:</strong> {currentPermit.processingTime}</li>
+                    </ul>
                   </div>
 
                   {showAlert && (
