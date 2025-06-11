@@ -159,7 +159,7 @@ const PermitSelection = () => {
                   <p className="usa-alert__text">
                     If you're unsure which permit you need, please contact our support team at{' '}
                     <a href="tel:1-800-853-1964">1-800-853-1964</a> or{' '}
-                    <a href="mailto:permits@noaa.gov">permits@noaa.gov</a> for assistance.
+                    <a href="mailto:permits@example.gov">permits@example.gov</a> for assistance.
                   </p>
                 </div>
               </div>
