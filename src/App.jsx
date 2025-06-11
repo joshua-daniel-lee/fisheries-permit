@@ -190,30 +190,6 @@ const ApplicationsPage = () => (
               </div>
             </div>
           </div>
-
-          <div className="margin-top-6">
-            <h2>Quick Actions</h2>
-            <div className="grid-row grid-gap margin-top-2">
-              <div className="grid-col-12 tablet:grid-col-6">
-                <div className="usa-card">
-                  <div className="usa-card__body">
-                    <h3>Apply for New Permit</h3>
-                    <p>Start a new permit application for commercial or recreational fishing.</p>
-                    <a href="/permits" className="usa-button">Browse Permits</a>
-                  </div>
-                </div>
-              </div>
-              <div className="grid-col-12 tablet:grid-col-6">
-                <div className="usa-card">
-                  <div className="usa-card__body">
-                    <h3>Renew Existing Permit</h3>
-                    <p>Renew your current permits before they expire.</p>
-                    <button className="usa-button usa-button--outline">View Renewals</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
