@@ -166,9 +166,14 @@ main {
   justify-content: space-between;
 }
 
-/* Ensure uniform card heights on applications page */
-[class*="grid-col"] .usa-card {
+/* Ensure uniform card heights on applications page - exclude quick action cards */
+.grid-row:not(.margin-top-6) [class*="grid-col"] .usa-card {
   min-height: 420px;
+}
+
+/* Quick action cards should be smaller */
+.margin-top-6 [class*="grid-col"] .usa-card {
+  min-height: auto;
 }
 
 /* Applications page specific card styling */
@@ -217,15 +222,15 @@ main {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  /* Tablet adjustments */
-  [class*="grid-col"] .usa-card {
+  /* Tablet adjustments - exclude quick action cards */
+  .grid-row:not(.margin-top-6) [class*="grid-col"] .usa-card {
     min-height: 380px;
   }
 }
 
 @media (min-width: 1025px) {
-  /* Desktop adjustments */
-  [class*="grid-col"] .usa-card {
+  /* Desktop adjustments - exclude quick action cards */
+  .grid-row:not(.margin-top-6) [class*="grid-col"] .usa-card {
     min-height: 420px;
   }
 }
