@@ -1,0 +1,49 @@
+
+> fishing-permit-system@0.1.0 predeploy
+> npm run build
+
+
+> fishing-permit-system@0.1.0 build
+> react-scripts build
+
+Creating an optimized production build...
+Compiled with warnings.
+
+[eslint] 
+src/App.jsx
+  Line 67:7:  'PermitsPage' is assigned a value but never used  no-unused-vars
+
+src/components/Header.jsx
+  Line 6:3:  'PrimaryNav' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+File sizes after gzip:
+
+  133.12 kB  build/static/js/main.380c9175.js
+  65.12 kB   build/static/css/main.36ac9266.css
+
+The project was built assuming it is hosted at /$Amoa2025!!!/.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+
+> fishing-permit-system@0.1.0 deploy
+> gh-pages -d build
+
+Error: spawn E2BIG
+    at ChildProcess.spawn (node:internal/child_process:420:11)
+    at Object.spawn (node:child_process:753:9)
+    at /Users/joshualee/Documents/GitHub/my-app/node_modules/gh-pages/lib/git.js:30:22
+    at new Promise (<anonymous>)
+    at spawn (/Users/joshualee/Documents/GitHub/my-app/node_modules/gh-pages/lib/git.js:29:10)
+    at Git.exec (/Users/joshualee/Documents/GitHub/my-app/node_modules/gh-pages/lib/git.js:69:10)
+    at Git.rm (/Users/joshualee/Documents/GitHub/my-app/node_modules/gh-pages/lib/git.js:146:15)
+    at /Users/joshualee/Documents/GitHub/my-app/node_modules/gh-pages/lib/index.js:188:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

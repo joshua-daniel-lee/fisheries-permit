@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import {
   Header as USWDSHeader,
   Title,
-  PrimaryNav,
 } from "@trussworks/react-uswds";
 
 const Header = ({ user, onSignOut }) => {

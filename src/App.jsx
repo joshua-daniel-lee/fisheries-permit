@@ -64,27 +64,6 @@ const HomePage = () => (
   </main>
 );
 
-const PermitsPage = () => (
-  <main id="main-content" className="usa-section">
-    <div className="grid-container">
-      <div className="grid-row">
-        <div className="grid-col-12">
-          <h1>Permits</h1>
-          <p>Manage your fishing permits and licenses.</p>
-          
-          <div className="usa-alert usa-alert--warning">
-            <div className="usa-alert__body">
-              <h4 className="usa-alert__heading">Under Development</h4>
-              <p className="usa-alert__text">
-                This section is currently being developed. Please check back later.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-);
 
 const ApplicationsPage = () => (
   <main id="main-content" className="usa-section">
