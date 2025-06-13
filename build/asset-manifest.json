@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/fisheries-permit/static/css/main.08efefd2.css",
-    "main.js": "/fisheries-permit/static/js/main.db382264.js",
+    "main.js": "/fisheries-permit/static/js/main.380c9175.js",
     "static/media/jpg": "/fisheries-permit/static/media/fdfa1c365bb151847b2c.fdfa1c365bb151847b2c.jpg",
     "static/media/ttf": "/fisheries-permit/static/media/215adb34128fcb20668b.215adb34128fcb20668b.ttf",
     "static/media/woff": "/fisheries-permit/static/media/d85b43c39f4620dfa5b4.d85b43c39f4620dfa5b4.woff",
     "static/media/woff2": "/fisheries-permit/static/media/936869ba46988c238748.936869ba46988c238748.woff2",
     "index.html": "/fisheries-permit/index.html",
     "main.08efefd2.css.map": "/fisheries-permit/static/css/main.08efefd2.css.map",
-    "main.db382264.js.map": "/fisheries-permit/static/js/main.db382264.js.map"
+    "main.380c9175.js.map": "/fisheries-permit/static/js/main.380c9175.js.map"
   },
   "entrypoints": [
     "static/css/main.08efefd2.css",
-    "static/js/main.db382264.js"
+    "static/js/main.380c9175.js"
   ]
 }
